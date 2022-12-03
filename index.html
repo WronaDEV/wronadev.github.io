@@ -5,27 +5,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="style.css" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <title>MyPage</title>
 </head>
 <body>
     <div id="header">
         <div id="languages-menu" onclick="toggle()">
-            <img src="assets/united-kingdom-flag1.png" id="united-kingdom-flag">
+            <img src="assets/united-kingdom-flag.png" id="united-kingdom-flag">
             <span id="languages-menu-text">EN</span>
             <div class="arrow toggle-down"></div>
         </div>
         <div class="languages-list unshow">
             <div id="poland">
+                <img src="assets/polish-flag.png" id="polish-flag">
                 <span class="languages-list-text" id="polish-text">PL</span>
             </div>
-            <span class="languages-list-text" id="germany-text">DE</span>
+            <div id="germany">
+                <img src="assets/germany-flag.png" id="germany-flag">   
+                <span class="languages-list-text" id="germany-text">DE</span>
+            </div>
         </div>
     </div>
-    <img src="assets/programming.png" id="programming-image">
+    <img src="assets/programming.png" id="programming-image"></img>
     <div class="typewriter">
         <h1>Programming is my passion.</h1>
     </div>
-<script src="script.js" type="text/javascript"></script>
+    <section id="about-me-section">
+        <h1 id="about-me-text" data-aos="fade-up">About me</h1>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script src="script.js" type="text/javascript"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+      AOS.init({
+  offset: 120,
+  delay: 0,
+  duration: 1000,
+  easing: 'ease-out',
+  once: false,
+});
+    </script>
 </body>
 </html>
