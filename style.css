@@ -195,17 +195,65 @@ body {
     margin-top: 100vh;
 }
 
-#about-me-text {
-    position: absolute;
-    color: white;
-    left: 50%;
-    right: 50%;
-    font-size: 2em;
-    white-space: nowrap;
-    transform: translate(-50%, -50%);
+#about-me-box {
+    width: 1000px;
+    height: 600px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0px 0px 50px 3px black;
 }
 
-  
+#about-me-text1 {
+    position: absolute;
+    color: white;
+    margin-top: 40px;
+    margin-left: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    white-space: nowrap;
+}
+
+#img-pokemon-crow {
+    width: 300px;
+    height: 300px;
+    border-radius: 300px;
+    margin-top: 20px;
+    margin-left: 670px;
+}
+
+#social-media-list {
+    width: 350px;
+    margin-top: 185px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#github-icon {
+    width: 70px;
+    height: 70px;
+}
+
+#github-icon:hover {
+    width: 100px;
+    height: 100px;
+}
+
+#mail-icon {
+    width: 70px;
+    height: 70px;
+    margin-left: 25px;
+}
+
+#footer {
+    margin-bottom: 0;
+    width: 100%;
+    height: 100px;
+    background-color: #1C1C1C;
+}  
+
+
 @keyframes typing {
     from { width: 0 }
     to { width: 520px }
