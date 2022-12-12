@@ -1,3 +1,4 @@
+<?php
 function getHits() {
   if(($fp = @fopen("data/counter.txt", "r+")) === false)
    return false;
@@ -9,3 +10,4 @@ function getHits() {
   return $count;
 }
 define(getHits());
+?>
