@@ -12,7 +12,7 @@ body {
 }
   
 ::-webkit-scrollbar-track {
-    background-color: #212123;
+    background-color: rgba(0, 0, 0, 0.82);
 }
    
 ::-webkit-scrollbar-thumb {
@@ -24,7 +24,8 @@ body {
     background-color: #00e4e4;
 }
 
-#header {
+#navbar {
+    position: fixed;
     width: 100%;
     height: 60px;
 }
@@ -78,7 +79,10 @@ body {
 
 .languages-list {
     position: absolute;
-    background-color: #212123;
+    background: rgba(0, 0, 0, 0.75);
+    background: linear-gradient(to left top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.25));
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     width: 150px;
     height: 100px;
     border-bottom-left-radius: 10px;
@@ -159,7 +163,7 @@ body {
     z-index: -1;
 }
 
-#languages-menu:hover:before {
+#languages-menu:hover::before {
     opacity: 100%;
 }
 
@@ -184,25 +188,81 @@ body {
 #programming-image {
     position: absolute;
     width: 100%;
-    height: 100vh;
+    height: 106.5vh;
     margin-top: -60px;
     z-index: -1;
 }
 
 #about-me-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
     width: 100%;
     height: 100vh;
     margin-top: 100vh;
+    z-index: -10;
+}
+
+#snow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    z-index: -1000;
 }
 
 #about-me-box {
+    position: relative;
     width: 1000px;
     height: 600px;
+    background-color: transparent;
+    overflow: hidden;
+    z-index: -3;
+}
+
+#about-me-box-inside {
+    position: absolute;
+    width: 990px;
+    height: 590px;
+    background-color: transparent;
     margin-top: auto;
     margin-bottom: auto;
     margin-left: auto;
     margin-right: auto;
-    box-shadow: 0px 0px 50px 3px black;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 1);
+    z-index: -1;
+    margin: 5px;
+}
+
+#about-me-box::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 1000px;
+    height: 600px;
+    transform-origin: bottom right;
+    background: linear-gradient(0deg, transparent, var(--title-color));
+    animation: infinite 6s linear infinite;
+    z-index: -2;
+}
+
+#about-me-box::after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 1000px;
+    height: 600px;
+    transform-origin: bottom right;
+    background: linear-gradient(0deg, transparent, var(--title-color));
+    animation: infinite 6s linear infinite;
+    animation-delay: -3s;
+    z-index: -2;
 }
 
 #about-me-text1 {
@@ -210,9 +270,155 @@ body {
     color: white;
     margin-top: 40px;
     margin-left: 40px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Zen Dots', cursive;
     font-size: 50px;
     white-space: nowrap;
+}
+
+#about-me-text2 {
+    position: absolute;
+    color: white;
+    margin-top: 110px;
+    margin-left: 40px;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    white-space: nowrap;
+}
+
+#about-me-text3 {
+    position: absolute;
+    color: white;
+    margin-top: 195px;
+    margin-left: 40px;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    white-space: nowrap;
+}
+
+.programming-language-icon {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+    margin-top: 215px;
+    border: solid 3px white;
+}
+
+.programming-language-text {
+    position: absolute;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 280px;
+}
+
+#html-icon {
+    background-color: black;
+}
+
+#html-text {
+    margin-left: 8px;
+}
+
+#css-icon {
+    margin-left: 80px;
+}
+
+#css-text {
+    margin-left: 93px;
+}
+
+#javascript-icon {
+    margin-left: 160px;
+}
+
+#javascript-text {
+    margin-left: 150px;
+}
+
+#python-icon {
+    background-color: black;
+    margin-top: 320px;
+}
+
+#python-text {
+    margin-top: 385px;
+    margin-left: 4px;
+}
+
+#mysql-icon {
+    background-color: black;
+    margin-top: 320px;
+    margin-left: 80px;
+}
+
+#mysql-text {
+    margin-top: 385px;
+    margin-left: 84px;
+}
+
+#php-icon {
+    background-color: black;
+    margin-top: 320px;
+    margin-left: 160px;
+}
+
+#php-text {
+    margin-top: 385px;
+    margin-left: 172px;
+}
+
+#about-me-text4 {
+    position: absolute;
+    color: white;
+    margin-top: 180px;
+    margin-left: 380px;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    white-space: nowrap;
+}
+
+#cyber-security-icon {
+    margin-top: 215px;
+    margin-left: 370px;
+    background-color: gray;
+}
+
+#cyber-security-text {
+    margin-top: 280px;
+    margin-left: 345px;
+}
+
+#photos-editing-icon {
+    margin-top: 215px;
+    margin-left: 520px;
+    background-color: gray;
+}
+
+#photos-editing-text {
+    margin-top: 280px;
+    margin-left: 495px;
+}
+
+#videos-editing-icon {
+    margin-top: 320px;
+    margin-left: 370px;
+    background-color: gray;
+}
+
+#videos-editing-text {
+    margin-top: 385px;
+    margin-left: 347px;
+}
+
+#database-icon {
+    margin-top: 320px;
+    margin-left: 520px;
+    background-color: gray;
+}
+
+#database-text {
+    margin-top: 385px;
+    margin-left: 510px;
 }
 
 #img-pokemon-crow {
@@ -221,37 +427,68 @@ body {
     border-radius: 300px;
     margin-top: 20px;
     margin-left: 670px;
+    z-index: 1;
+}
+
+#about-me-text5 {
+    position: absolute;
+    color: white;
+    margin-top: 5px;
+    right: 130px;
+    font-size: 35px;
+    font-family: Arial, Helvetica, sans-serif;
+    white-space: nowrap;
+}
+
+#about-me-text6 {
+    position: absolute;
+    color: white;
+    margin-top: 50px;
+    right: 45px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    white-space: nowrap;
 }
 
 #social-media-list {
-    width: 350px;
-    margin-top: 185px;
+    width: 165px;
+    margin-top: 160px;
     margin-left: auto;
     margin-right: auto;
 }
 
 #github-icon {
-    width: 70px;
-    height: 70px;
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    border: solid white 5px;
+    border-radius: 100px;
+    background-color: white;
+    transform: scale(1, 1);
+    transition: all 0.5s ease-out;
 }
 
 #github-icon:hover {
-    width: 100px;
-    height: 100px;
+    transform: scale(1.2, 1.2);
+    box-shadow: 0 0 20px 5px black;
 }
 
 #mail-icon {
-    width: 70px;
-    height: 70px;
-    margin-left: 25px;
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    border: solid white 5px;
+    border-radius: 100px;
+    background-color: black;
+    transform: scale(1, 1);
+    transition: all 0.5s ease-out;
+    margin-left: 20px;
 }
 
-#footer {
-    margin-bottom: 0;
-    width: 100%;
-    height: 100px;
-    background-color: #1C1C1C;
-}  
+#mail-icon:hover {
+    transform: scale(1.2, 1.2);
+    box-shadow: 0 0 20px 5px black;
+}
 
 
 @keyframes typing {
@@ -265,5 +502,309 @@ body {
     }
     50% {
         border-color: var(--title-color);
+    }
+}
+
+@keyframes infinite {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+@media only screen and (max-width: 1025px) {
+    #about-me-section {
+        height: 1320px;
+    }
+
+    #about-me-box {
+        height: 100%;
+        width: 100%;
+        text-align: center;
+    }
+
+    #about-me-box::before {
+        display: none;
+    }
+    
+    #about-me-box::after {
+        display: none;
+    }
+
+    #about-me-box-inside {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+    }
+
+    #about-me-text1 {
+        position: absolute;
+        color: white;
+        margin-left: 50%;
+        transform: translate(-50%, 0);
+        font-family: 'Zen Dots', cursive;
+        font-size: 50px;
+        white-space: nowrap;
+    }
+
+    #img-pokemon-crow {
+        width: 300px;
+        height: 300px;
+        display: block;
+        margin-top: 120px;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 300px;
+        z-index: 1;
+    }
+    
+    #about-me-text5 {
+        position: absolute;
+        color: white;
+        font-size: 35px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        font-family: Arial, Helvetica, sans-serif;
+        white-space: nowrap;
+    }
+
+    #about-me-text6 {
+        position: absolute;
+        color: white;
+        left: 50%;
+        transform: translate(-50%, 0);
+        font-size: 20px;
+        white-space: nowrap;
+    }
+
+    #about-me-text2 {
+        position: absolute;
+        color: white;
+        margin-top: 510px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        font-size: 15px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    #about-me-text3 {
+        position: absolute;
+        color: white;
+        margin-top: 594px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        font-size: 25px;
+        font-family: Arial, Helvetica, sans-serif;
+        white-space: nowrap;
+    }
+
+    #html-icon {
+        margin-top: 620px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        margin-left: -80px;
+        background-color: black;
+    }
+    
+    #html-text {
+        margin-top: 690px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        margin-left: -80px;
+    }
+    
+    #css-icon {
+        margin-top: 620px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        margin-left: 30px;
+    }
+    
+    #css-text {
+        margin-top: 690px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        margin-left: 33px;
+    }
+    
+    #javascript-icon {
+        margin-top: 620px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        margin-left: 140px;
+    }
+    
+    #javascript-text {
+        margin-top: 690px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        margin-left: 142px;
+    }
+    
+    #python-icon {
+        margin-top: 750px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        margin-left: -80px;
+        background-color: black;
+    }
+    
+    #python-text {
+        margin-top: 820px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        margin-left: -80px;
+    }
+    
+    #mysql-icon {
+        margin-top: 750px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        margin-left: 30px;
+    }
+    
+    #mysql-text {
+        margin-top: 820px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        margin-left: 33px;
+    }
+    
+    #php-icon {
+        margin-top: 750px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        margin-left: 140px;
+    }
+    
+    #php-text {
+        margin-top: 820px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        margin-left: 142px;
+    }
+    
+    #about-me-text4 {
+        position: absolute;
+        color: white;
+        margin-top: 870px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        margin-left: 40px;
+        font-size: 25px;
+        font-family: Arial, Helvetica, sans-serif;
+        white-space: nowrap;
+    }
+    
+    #cyber-security-icon {
+        margin-top: 920px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        margin-left: -50px;
+        background-color: gray;
+    }
+    
+    #cyber-security-text {
+        margin-top: 990px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        margin-left: -50px;
+    }
+    
+    #photos-editing-icon {
+        margin-top: 920px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        margin-left: 120px;
+        background-color: gray;
+    }
+    
+    #photos-editing-text {
+        margin-top: 990px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        margin-left: 120px;
+    }
+    
+    #videos-editing-icon {
+        margin-top: 1050px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        margin-left: -50px;
+        background-color: gray;
+    }
+    
+    #videos-editing-text {
+        margin-top: 1120px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        margin-left: -50px;
+    }
+    
+    #database-icon {
+        margin-top: 1050px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        margin-left: 120px;
+        background-color: gray;
+    }
+    
+    #database-text {
+        margin-top: 1120px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        margin-left: 120px;
+    }
+
+    #social-media-list {
+        width: 165px;
+        margin-top: 800px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .typewriter h1 {
+        position: absolute;
+        left: 50%;
+        right: 50%;
+        overflow: hidden;
+        width: 350px;
+        margin-top: 40vh;
+        font-size: 18px;
+        border-right: 1px solid var(--title-color);
+        color: white;
+        white-space: nowrap;
+        letter-spacing: 5px;
+        animation: 
+            typing 3s steps(40, end),
+            blink-caret 1s step-end infinite;
+        z-index: -1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@media only screen and (max-width: 373px) {
+    .typewriter h1 {
+        position: absolute;
+        left: 50%;
+        right: 50%;
+        overflow: hidden;
+        width: 200px;
+        margin-top: 40vh;
+        font-size: 10px;
+        border-right: 1px solid var(--title-color);
+        color: white;
+        white-space: nowrap;
+        letter-spacing: 5px;
+        animation: 
+            typing 3s steps(40, end),
+            blink-caret 1s step-end infinite;
+        z-index: -1;
+        transform: translate(-50%, -50%);
     }
 }

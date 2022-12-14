@@ -1,0 +1,77 @@
+body {
+    background-color: black;
+}
+
+#error-404-h1 {
+    position: absolute;
+    color: green;
+    font-family: 'VT323', monospace;
+    font-size: 200px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    white-space: nowrap;
+}
+
+#error-404-p {
+    position: absolute;
+    color: green;
+    font-family: 'VT323', monospace;
+    font-size: 40px;
+    margin-top: 350px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    overflow: hidden;
+    border-right: 1px solid green;
+    white-space: nowrap;
+    letter-spacing: 5px;
+    animation: 
+        typing 3s steps(40, end),
+        blink-caret 1s step-end infinite;
+}
+
+#dot {
+    position: absolute;
+    color: green;
+    font-family: 'VT323', monospace;
+    font-size: 40px;
+    margin-top: 350px;
+    left: 50%;
+    margin-left: 131px;
+    transform: translate(-50%, 0);
+    animation: dot-animation 1s infinite;
+}
+
+@keyframes hacker-animation {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes dot-animation {
+    0% {
+        visibility: hidden;
+    }
+    50% {
+        visibility: visible;
+    }
+    100% {
+        visibility: hidden;
+    }
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 330px }
+}
+  
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent
+    }
+    50% {
+        border-color: var(--title-color);
+    }
+}
