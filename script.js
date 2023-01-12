@@ -17,7 +17,7 @@ function toggle() {
 
 
 // Snow
-let snow = "true";
+let snow = "false";
 if (snow === "true") {
     document.addEventListener('DOMContentLoaded', function(){
         var script = document.createElement('script');
