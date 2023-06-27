@@ -15,6 +15,51 @@ function toggle() {
     }
 }
 
+const LoadingPage = document.getElementById("loading-page");
+setTimeout(() => {
+    LoadingPage.style.display = "none";
+}, 1900)
+
+setTimeout(() => {
+    document.body.style.overflowY = "scroll";
+}, 1000)
+
+function Translate(arg) {
+    if (arg === "polish") {
+        document.getElementById("united-kingdom-flag").src = "assets/polish-flag.png";
+        document.getElementById("languages-menu-text").textContent = "PL";
+        document.getElementById("hello-text").textContent = "Cześć, jestem";
+        document.getElementById("hello-text").style.width = "500px";
+        document.getElementById("wrona-text").style.marginLeft = "75px";
+        document.getElementById("main-image").style.marginLeft = "300px";
+        document.getElementById("about-me-text1").textContent = "O mnie";
+        document.getElementById("about-me-text2").innerHTML = "Cześć, jestem Wrona. Zajmuję się programowaniem od 2019 roku. Tworzę zaawansowane<br> strony, proste aplikacje Webowe a nawet gry. Programuję z pasji oraz z perspektywą dalszej<br> pracy. Przykłady moich projektów możesz zobaczyć na moim <a target='_blank' href='https://github.com/WronaDEV'>[Githubie]</a>. Jeśli chcesz się<br> skontaktować to pisz śmiało!";
+        toggle();
+    }
+    if (arg === "germanisch") {
+        document.getElementById("united-kingdom-flag").src = "assets/germany-flag.png";
+        document.getElementById("languages-menu-text").textContent = "DE";
+        document.getElementById("hello-text").textContent = "Hallo, ich bin";
+        document.getElementById("hello-text").style.width = "500px";
+        document.getElementById("wrona-text").style.marginLeft = "75px";
+        document.getElementById("main-image").style.marginLeft = "300px";
+        document.getElementById("about-me-text1").textContent = "Über mich";
+        document.getElementById("about-me-text2").innerHTML = "Cześć, jestem Wrona. Zajmuję się programowaniem od 2019 roku. Tworzę zaawansowane<br> strony, proste aplikacje Webowe a nawet gry. Programuję z pasji oraz z perspektywą dalszej<br> pracy. Przykłady moich projektów możesz zobaczyć na moim <a target='_blank' href='https://github.com/WronaDEV'>[Githubie]</a>. Jeśli chcesz się<br> skontaktować to pisz śmiało!";
+        toggle();
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Snow
 let snow = "false";
@@ -84,3 +129,123 @@ if (snow === "true") {
         document.head.append(script);
     });
 }
+
+// Rain
+var ctx;
+var cW;
+var cH;
+
+var raindrops;
+
+var rainStrength = 1;
+
+function initCanvas() {
+
+	ctx = document.getElementById("particleCanvas").getContext("2d");
+
+	ctx.canvas.width = 1280 * 0.75; //690
+	ctx.canvas.height = 720 * 0.75; //540
+
+	cW = ctx.canvas.width;
+	cH = ctx.canvas.height;
+
+}
+
+function Raindrops() {
+
+	this.x;
+	this.y;
+	this.s;
+	this.width;
+	this.height;
+
+	this.drops = [];
+	this.splashes = [];
+
+}
+Raindrops.prototype.addDrop = function() {
+	
+	this.x = (Math.random() * (cW + 100)) - 100;
+	this.y = 0;
+	this.s = (Math.random() * 7) + 2;
+
+	this.drops.push({
+		x: this.x,
+		y: this.y,
+		velY: 2,
+		width: this.s / 3,
+		height: this.s * 1.2,
+		speed: this.s,
+		life: 60
+	});
+
+};
+Raindrops.prototype.render = function() {
+
+	for (var i = 0; i < rainStrength; i++) {
+		this.addDrop();
+	};
+	
+	ctx.save();
+
+	ctx.clearRect(0, 0, cW, cH);
+
+	ctx.fillStyle = 'rgba(50, 80, 200, 1)';
+	for (var i = 0; i < this.drops.length; i++) {
+		var drop = this.drops[i];
+
+		ctx.fillRect(drop.x, drop.y, drop.width, drop.height);
+		drop.y += drop.speed * 2;
+		drop.x += 2;
+
+		if (drop.y + drop.height > cH) {
+			this.splashes.push(drop);
+
+			this.drops.splice(i, 1);
+		}
+	};
+
+	for (var i = 0; i < this.splashes.length; i++) {
+		var splash = this.splashes[i];
+
+		ctx.fillRect(splash.x, splash.y, splash.width/3, splash.height/3);
+
+		splash.y -= splash.velY * splash.speed / 6;
+		splash.life--;
+		splash.velY -= 0.1;
+		splash.x += 0.15 * splash.speed;
+
+		if (splash.life <= 0 ) {
+			this.splashes.splice(i, 1);
+		}
+		
+	};
+
+	ctx.restore();
+
+};
+
+
+function init() {
+
+	raindrops = new Raindrops();
+
+	loop();
+}
+
+function render() {
+
+	raindrops.render();
+
+}
+
+function loop() {
+
+	requestAnimationFrame(loop);
+	render();
+}
+
+window.addEventListener('load', function() {
+	initCanvas();
+	init();
+});
