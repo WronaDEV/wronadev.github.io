@@ -986,3 +986,26 @@ p > a:active {
         margin-top: 90px;
     }
 }
+
+@media only screen and (max-width: 225px) {
+    #main-image {
+        width: 90%;
+        height: auto;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    #hello-text {
+        margin-left: -75px;
+    }
+    .typewriter {
+        margin-top: 100px;
+        margin-left: -1120px;
+    }
+    #wrona-text {
+        margin-left: 10px;
+    }
+    #job-title {
+        margin-top: 150px;
+    }
+}
