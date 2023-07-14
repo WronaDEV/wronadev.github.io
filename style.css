@@ -674,7 +674,7 @@ p > a:active {
     box-shadow: 0 0 20px 5px black;
 }
 
-#mail-icon {
+#discord-icon {
     cursor: pointer;
     width: 60px;
     height: 60px;
@@ -686,9 +686,26 @@ p > a:active {
     margin-left: 20px;
 }
 
-#mail-icon:hover {
+#discord-icon:hover {
     transform: scale(1.2, 1.2);
     box-shadow: 0 0 20px 5px black;
+}
+
+#copy-done {
+    display: flex;
+    color: white;
+    width: 100px;
+    height: 23px;
+    background-color: rgb(0, 182, 3);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin-left: 80px;
+    margin-top: -110px;
+    padding-top: 5px;
+    border-radius: 10px;
+    opacity: 0;
+    transition: all 1s;
+    justify-content: center;
 }
 
 #easter-egg {
@@ -774,12 +791,11 @@ p > a:active {
     }
 
     #about-me-text2 {
-        position: absolute;
         color: white;
         margin-top: 510px;
+        font-size: 15px;
         left: 50%;
         transform: translate(-50%, 0);
-        font-size: 15px;
         font-family: Arial, Helvetica, sans-serif;
     }
 

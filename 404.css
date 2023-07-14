@@ -66,6 +66,6 @@ body {
         border-color: transparent
     }
     50% {
-        border-color: var(--title-color);
+        border-color: green;
     }
 }

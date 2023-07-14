@@ -49,6 +49,13 @@ function Translate(arg) {
     }
 }
 
+var copyDiscord = () => {
+    navigator.clipboard.writeText('wronadev');
+    document.getElementById("copy-done").style.opacity = 1;
+    setTimeout(() => {
+        document.getElementById("copy-done").style.opacity = 0;
+    }, 1000)
+}
 
 
 
