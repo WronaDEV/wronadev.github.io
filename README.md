@@ -8,4 +8,4 @@ That is my website about me and about my experiences in programming. You can get
  - <img src="https://wronadev.github.io/assets/css-icon.png" width="20" height="20"> CSS
  - <img src="https://wronadev.github.io/assets/javascript-icon.png" width="20" height="20"> JavaScript
 
-### **Link:** [wronaexe.github.io](https://wronexe.github.io)
+### **Link:** [wronadev.github.io](https://wronadev.github.io)
