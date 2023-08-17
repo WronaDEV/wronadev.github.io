@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en-EN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/assets/crow.svg">
+    <title>Wrona | MyPage</title>
+</head>
+<body onload="OnLoad()">
+    <div id="loading-page"><!--
+        <div id="white-shadow"></div> -->
+        <img src="assets/crow-crown.png" id="loading-img">
+    </div>
+    <div id="navbar"><!--
+        <div id="nav-projects-div">
+            <p id="nav-projects-text">Projects</p>
+        </div>
+        <div id="languages-menu" onclick="toggle()">
+            <img src="assets/united-kingdom-flag.png" id="united-kingdom-flag">
+            <span id="languages-menu-text">EN</span>
+            <div class="arrow toggle-down"></div>
+        </div>
+        <div class="languages-list unshow">
+            <div id="poland" onclick="Translate('polish')">
+                <img src="assets/polish-flag.png" id="polish-flag">
+                <span class="languages-list-text" id="polish-text">PL</span>
+            </div>
+            <div id="germany" onclick="Translate('germanisch')">
+                <img src="assets/germany-flag.png" id="germany-flag">   
+                <span class="languages-list-text" id="germany-text">DE</span>
+            </div>
+        </div>-->
+    </div>
+    <div id="main-section">
+        <p id="hello-text">Hi, I'm </p>
+        <div class="typewriter" id="wrona-div">
+            <h1 id="wrona-text">Wrona!</h1>
+        </div>
+        <p id="job-title">WebDeveloper / WebDesigner</p>
+        <img src="assets/crow-crown.png" id="main-image">
+    </div>
+    <section id="about-me-section">
+        <div id="snow"></div>
+        <canvas id="particleCanvas"></canvas>
+        <div id="about-me-box">
+            <div id="about-me-box-inside">
+            <h1 id="about-me-text1" data-aos="fade-up">About me</h1>
+            <p id="about-me-text2" data-aos="fade-up">Hi, I'm Wrona. I've been programming since 2019. I create advanced websites, simple web<br>applications, and even games. I program out of passion and with a perspective for future work.<br>You can see examples of my projects on my <a target='_blank' href='https://github.com/WronaDEV'>[Github]</a>. If u want to message me, just write<br>at my discord.</p>
+            <p id="about-me-text3" data-aos="fade-up">Programming skills: </p>
+            <ul>
+                <img src="assets/html-icon.png" class="programming-language-icon" id="html-icon" data-aos="fade-down">
+                <p class="programming-language-text" id="html-text" data-aos="fade-down">HTML</p>
+                <img src="assets/css-icon.png" class="programming-language-icon" id="css-icon" data-aos="fade-down">
+                <p class="programming-language-text" id="css-text" data-aos="fade-down">CSS</p>
+                <img src="assets/javascript-icon.png" class="programming-language-icon" id="javascript-icon" data-aos="fade-down">
+                <p class="programming-language-text" id="javascript-text" data-aos="fade-down">JavaScript</p>
+                <img src="assets/python-icon.png" class="programming-language-icon" id="python-icon" data-aos="fade-down">
+                <p class="programming-language-text" id="python-text" data-aos="fade-down">Python</p>
+                <img src="assets/mysql-icon1.webp" class="programming-language-icon" id="mysql-icon" data-aos="fade-down">
+                <p class="programming-language-text" id="mysql-text" data-aos="fade-down">MySQL</p>
+                <img src="assets/php-icon.svg" class="programming-language-icon" id="php-icon" data-aos="fade-down">
+                <p class="programming-language-text" id="php-text" data-aos="fade-down">PHP</p>
+            </ul>
+            <p id="about-me-text4" data-aos="fade-up">Other skills:</p>
+            <ul>
+                <img src="assets/cyber-security-icon.svg" class="programming-language-icon" id="cyber-security-icon" data-aos="fade-down">
+                <p class="programming-language-text" id="cyber-security-text" data-aos="fade-down">Cyber security</p>
+                <img src="assets/photos-editing-icon.png" class="programming-language-icon" id="photos-editing-icon" data-aos="fade-down">
+                <p class="programming-language-text" id="photos-editing-text" data-aos="fade-down">Photos editing</p>
+                <img src="assets/videos-editing-icon.png" class="programming-language-icon" id="videos-editing-icon" data-aos="fade-down">
+                <p class="programming-language-text" id="videos-editing-text" data-aos="fade-down">Videos editing</p>
+                <img src="assets/database-icon.png" class="programming-language-icon" id="database-icon" data-aos="fade-down">
+                <p class="programming-language-text" id="database-text" data-aos="fade-down">Databases</p>
+            </ul>
+            <img src="assets/pokemon-crow.png" id="img-pokemon-crow" data-aos="zoom-in">
+            <p id="about-me-text5" data-aos="fade-up">Wrona</p>
+            <p id="about-me-text6" data-aos="fade-up">WebDesigner / WebDeveloper</p>
+            <ul id="social-media-list">
+                <a href="https://github.com/WronaDEV" target="_blank" title="github.com/WronaDEV">
+                    <img src="assets/github-icon.png" id="github-icon">
+                </a>
+                <a onclick="copyDiscord()" title="wronadev">
+                    <img src="assets/discord-icon.png" id="discord-icon">
+                </a>
+                <div id="copy-done">
+                    Copied!
+                </div>
+            </ul></div>
+        </div>
+        <img src="assets/easter-egg.png" id="easter-egg" alt="Are u serious reading this code?">
+    </section>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script src="script.js" type="text/javascript"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+      AOS.init({
+  offset: 120,
+  delay: 0,
+  duration: 1000,
+  easing: 'ease-out',
+  once: true,
+});
+    </script>
+</body>
+</html>
