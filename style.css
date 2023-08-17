@@ -759,15 +759,18 @@ p > a:active {
         font-family: 'Zen Dots', cursive;
         font-size: 50px;
         white-space: nowrap;
+        left: 50%;
+        transform: translate(-50%, 0);
     }
 
     #img-pokemon-crow {
         width: 300px;
-        height: 300px; 
-        margin-left: 0;
+        height: 300px;
         left: 0;
         margin-top: 120px;
         border-radius: 300px;
+        margin-left: auto;
+        margin-right: auto;
         z-index: 1;
     }
     
@@ -792,10 +795,12 @@ p > a:active {
 
     #about-me-text2 {
         color: white;
-        margin-top: 510px;
+        margin-top: 520px;
         font-size: 15px;
         font-family: Arial, Helvetica, sans-serif;
         white-space: pre;
+        left: 50%;
+        transform: translate(-50%, 0);
     }
 
     #about-me-text3 {
@@ -976,8 +981,6 @@ p > a:active {
     
     #about-me-box-inside {
         background-color: transparent;
-        display: flex;
-        justify-content: center;
     }
 }
 
