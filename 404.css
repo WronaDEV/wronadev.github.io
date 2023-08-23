@@ -1,71 +1,15 @@
 body {
     background-color: black;
+    margin: 0;
 }
 
-#error-404-section {
+#main-text {
+    color: white;
     position: absolute;
-    width: 710px;
-    height: 610px;
-    top: 50%;
-    left: 50%;
     transform: translate(-50%, -50%);
-}
-
-#error-404-h1 {
-    position: absolute;
-    color: green;
-    font-family: 'VT323', monospace;
-    font-size: 200px;
     left: 50%;
-    transform: translate(-50%, 0);
-    white-space: nowrap;
-}
-
-#error-404-p {
-    position: absolute;
-    color: green;
-    font-family: 'VT323', monospace;
-    font-size: 40px;
-    margin-top: 350px;
-    left: 50%;
-    transform: translate(-50%, 0);
-    overflow: hidden;
-    white-space: nowrap;
-    letter-spacing: 5px;
-    animation: 
-        typing 3s steps(40, end),
-        blink-caret 1s step-end infinite;
-}
-
-#dot {
-    position: absolute;
-    color: green;
-    font-family: 'VT323', monospace;
-    font-size: 40px;
-    margin-top: 350px;
-    left: 50%;
-    margin-left: 170px;
-    transform: translate(-50%, 0);
-    opacity: 0;
-    animation: dot-animation 1s 3.4s infinite;
-}
-
-
-@keyframes dot-animation {
-    0%, 100% { opacity: 0; }
-    50% { opacity: 1; }
-}
-
-@keyframes typing {
-    from { width: 0 }
-    to { width: 320px }
-}
-  
-@keyframes blink-caret {
-    from, to {
-        border-color: transparent
-    }
-    50% {
-        border-color: green;
-    }
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    top: 50%;
 }
