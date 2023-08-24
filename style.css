@@ -389,6 +389,45 @@ p > a:active {
     margin-left: 200px;
 }
 
+#portfolio-button {
+    position: absolute;
+    background-image: linear-gradient(135deg, #0012ff 0%, #7700FF 100%);
+    color: white;
+    border: solid 2px black;
+    box-shadow: 0 0 10px 1px black;
+    outline: none;
+    font-family: 'Roboto', sans-serif;
+    width: 180px;
+    height: 50px;
+    border-radius: 10px;
+    left: 50%;
+    top: 40vh;
+    margin-top: 70px;
+    margin-left: -300px;
+    font-size: 18px;
+    white-space: nowrap;
+    transform: translate(-50%, -50%);
+}
+
+#github-button {
+    position: absolute;
+    background-color: black;
+    color: white;
+    border: solid 2px white;
+    outline: none;
+    font-family: 'Roboto', sans-serif;
+    width: 180px;
+    height: 50px;
+    border-radius: 10px;
+    left: 50%;
+    top: 40vh;
+    margin-top: 70px;
+    margin-left: -70px;
+    font-size: 18px;
+    white-space: nowrap;
+    transform: translate(-50%, -50%);
+}
+
 #programming-image {
     position: absolute;
     width: 100%;
