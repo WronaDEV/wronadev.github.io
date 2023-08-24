@@ -319,7 +319,7 @@ p > a:active {
     overflow: hidden;
     width: 200px;
     top: 40vh;
-    margin-top: -29px;
+    margin-top: -65px;
     margin-left: -390px;
     font-family: 'Poppins', sans-serif;
     font-size: 40px;
@@ -346,7 +346,8 @@ p > a:active {
         typing 1s 1s steps(40, end),
         blink-caret 1s step-end infinite;
     z-index: -1;
-    transform: translate(-50%, -50%);
+    top: -65px;
+    transform: translate(-50%, 0);
 }
 
 @keyframes typing {
@@ -370,7 +371,7 @@ p > a:active {
     font-family: 'Poppins', sans-serif;
     left: 50%;
     top: 40vh;
-    margin-top: 45px;
+    margin-top: 10px;
     margin-left: -235px;
     font-size: 20px;
     white-space: nowrap;
