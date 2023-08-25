@@ -36,4 +36,6 @@ body {
     margin-left: 150px;
     margin-top: 0;
     transform: translate(-50%, -50%);
+    filter: grayscale(10);
+    border-radius: 10000px;
 }
