@@ -390,6 +390,7 @@ p > a:active {
 }
 
 #portfolio-button {
+    cursor: pointer;
     position: absolute;
     background-image: linear-gradient(135deg, #0012ff 0%, #7700FF 100%);
     color: white;
@@ -410,6 +411,7 @@ p > a:active {
 }
 
 #github-button {
+    cursor: pointer;
     position: absolute;
     background-color: black;
     color: white;
