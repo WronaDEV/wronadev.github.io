@@ -1048,10 +1048,19 @@ p > a:active {
     }
     #wrona-text {
         margin-left: 90px;
+        margin-top: 445px;
     }
     #job-title {
         margin-left: 0px;
         margin-top: 90px;
+    }
+    #portfolio-button {
+        margin-left: -100px;
+        margin-top: 150px;
+    }
+    #github-button {
+        margin-left: 100px;
+        margin-top: 150px;
     }
 }
 
