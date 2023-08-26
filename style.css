@@ -1072,8 +1072,12 @@ p > a:active {
 }
 
 @media only screen and (max-width: 400px) {
+    #main-image {
+        margin-top: -220px;
+    }
     #hello-text {
         margin-left: -75px;
+        margin-top: -20px;
     }
     .typewriter {
         margin-top: 100px;
@@ -1081,8 +1085,19 @@ p > a:active {
     }
     #wrona-text {
         margin-left: 10px;
+        top: -50px;
     }
     #job-title {
-        margin-top: 150px;
+        margin-top: 120px;
+    }
+    #portfolio-button {
+        width: 90%;
+        margin-left: 0;
+        margin-top: 180px;
+    }
+    #github-button {
+        width: 90%;
+        margin-left: 0;
+        margin-top: 250px;
     }
 }
