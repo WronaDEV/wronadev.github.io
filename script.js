@@ -138,6 +138,7 @@ if (snow === "true") {
 }
 
 // Rain
+/*
 var ctx;
 var cW;
 var cH;
@@ -256,3 +257,5 @@ window.addEventListener('load', function() {
 	initCanvas();
 	init();
 });
+
+*/
