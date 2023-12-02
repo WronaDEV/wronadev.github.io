@@ -69,7 +69,7 @@ var copyDiscord = () => {
 
 
 // Snow
-let snow = "false";
+let snow = "true";
 if (snow === "true") {
     document.addEventListener('DOMContentLoaded', function(){
         var script = document.createElement('script');
