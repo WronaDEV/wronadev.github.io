@@ -18,7 +18,7 @@ function toggle() {
 const LoadingPage = document.getElementById("loading-page");
 setTimeout(() => {
     LoadingPage.style.display = "none";
-}, 1900)
+}, 1890)
 
 setTimeout(() => {
     document.body.style.overflowY = "scroll";
@@ -257,5 +257,4 @@ window.addEventListener('load', function() {
 	initCanvas();
 	init();
 });
-
 */
