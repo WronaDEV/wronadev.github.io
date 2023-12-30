@@ -73,6 +73,13 @@ p > a:active {
     color: #470099;
 }
 
+#main-img {
+    display: none;
+    position: absolute;
+    width: 200px;
+    margin: 10px;
+}
+
 #loading-page {
     position: fixed;
     width: 100%;
