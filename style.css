@@ -28,7 +28,7 @@ body:after {
     top: 0;
     width: 100vw;
     height: 100vh;
-    background: url("assets/bg-winter5.jpg") center center no-repeat;
+    background: url("assets/bg1.jpg") center center no-repeat;
     filter: brightness(0.1);
     background-size: cover;
     z-index: -999;
